@@ -29,7 +29,7 @@ bool isNullOrEmpty(String self) {
 
 bool isNotNullOrEmpty(String self) => isNullOrEmpty(self);
 
-bool isNullOrBlank(String self) => self == null || self.trim().isEmpty == true;
+bool isNullOrBlank(String self) => self.trim().isEmpty == true;
 
 bool isNotNullOrBlank(String self) => !isNullOrBlank(self);
 

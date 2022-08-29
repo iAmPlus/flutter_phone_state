@@ -47,7 +47,7 @@ class FlutterPhoneState with WidgetsBindingObserver {
 
   FlutterPhoneState() {
     configureLogging(logger: _log);
-    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     _initializedNativeEvents!.forEach(_handleRawPhoneEvent);
   }
 
