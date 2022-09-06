@@ -67,9 +67,9 @@ class PhoneCallEvent {
   @override
   String toString() {
     return 'PhoneCallEvent{status: ${value(status)}, '
-        'id: ${truncate(call?.id, 12)} '
-        'callId: ${truncate(call?.callId, 12) ?? '-'}, '
-        'phoneNumber: ${call?.phoneNumber ?? '-'}}';
+        'id: ${truncate(call.id, 12)} '
+        'callId: ${truncate(call.callId, 12) ?? '-'}, '
+        'phoneNumber: ${call.phoneNumber ?? '-'}}';
   }
 }
 
@@ -212,6 +212,7 @@ class PhoneCall {
 }
 
 enum RawEventType { inbound, outbound, connected, disconnected }
+
 enum PhoneCallStatus {
   ringing,
   dialing,
@@ -222,6 +223,7 @@ enum PhoneCallStatus {
   timedOut,
   disconnected
 }
+
 enum PhoneCallPlacement { inbound, outbound }
 
 const Map<RawEventType, Set<PhoneCallStatus>> priorStatuses = {
